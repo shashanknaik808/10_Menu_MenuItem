@@ -1,6 +1,20 @@
 import React, { useState } from 'react';
 import { Button, Menu, MenuItem } from '@mui/material';
 
+function Test() {
+  const [anchorElm, setAnchorElm] = useState(null);
+  const [open, setOpen] = useState(false);
+
+  const handleClose = () => {
+    setAnchorElm(null);
+    setOpen(false);
+  }
+
+  const handleClick = (e) => {
+    setAnchorElm(e.currentTarget);
+    setOpen(true);
+  };
+
   return (
     <div>
       <Button variant='contained' onClick={handleClick}>Open Menu</Button>
@@ -12,5 +26,6 @@ import { Button, Menu, MenuItem } from '@mui/material';
       </Menu>
     </div>
   )
+}
 
 export default Test;
